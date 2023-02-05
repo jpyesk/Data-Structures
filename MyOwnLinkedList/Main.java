@@ -5,12 +5,24 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList<Integer> lst = new LinkedList<>();
-        lst.add(23);
-        lst.addFirst(52);
-        lst.add(2425);
-        for (Integer k : lst){
-            System.out.println(k);
+        MyLinkedList<Integer> lst = new MyLinkedList<>();
+        lst.addFirst(23);
+        lst.addLast(24);
+        lst.addLast(25);
+        lst.addLast(26);
+        while(!lst.isEmpty()){
+            System.out.println(lst.removeFirst());
+        }
+        System.out.println("Second way");
+        lst.addFirst(23);
+        lst.addLast(24);
+        lst.addLast(25);
+        lst.addLast(26);
+
+        lst.addFirst(22);
+
+        while(!lst.isEmpty()){
+            System.out.println(lst.removeFirst());
         }
     }
 }
